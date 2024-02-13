@@ -1,0 +1,98 @@
+body {
+    background-color: #100f0f;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.navbar,.font {
+    font-family: 'Comfortaa', cursive;
+    font-size: 19px;
+}
+.navbar {
+    background-color: #282828;
+}
+
+.text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(191, 226, 255, 0.52), 0 0 21px rgba(191, 226, 255, 0.92), 0 0 34px rgba(191, 226, 255, 0.78), 0 0 54px rgba(191, 226, 255, 0.92);
+}
+#particles-js {
+    position : fixed;
+    width:100%;
+    height:100%
+    }
+#carousel  {
+    touch-action: none;
+    display: flex;
+    height: 400px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+#drag-container,
+#spin-container {
+    position: relative;
+    display: flex;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg);
+}
+#drag-container a {
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.1);
+    border: 8px solid #BFE2FF;
+}
+#drag-container img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(50%) contrast(0.8);
+    transition: filter 0.3s;
+}     
+#drag-container a:hover img{
+    filter: grayscale(0) contrast(1);
+}          
+#drag-container p {
+    line-height: 1;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;      
+    font-family: Serif;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    color: #337AB7;
+    font-family: Verdana, sans-serif; 
+}
+#ground {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+}
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes spinRevert {
+    from {
+        transform: rotateY(360deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}   
+
